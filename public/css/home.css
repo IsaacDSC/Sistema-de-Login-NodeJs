@@ -105,6 +105,7 @@ input[type=button]:hover,
 input[type=submit]:hover,
 input[type=reset]:hover {
     background-color: #39ace7;
+    cursor: pointer;
 }
 
 input[type=button]:active,
