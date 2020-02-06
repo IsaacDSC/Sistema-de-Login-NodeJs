@@ -4,12 +4,17 @@ const bodyParser = require('body-parser')
 const app = express()
 const path = require('path')
 
+//adionando Rotas
+app.get('/', (req, res) => {
+    res.render('home/home')
+})
+
 //configurando bodyParser
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 //configurando handlebars
-app.engine('handlebars', handlebars({ defaultLayout: main }))
+app.engine('handlebars', handlebars({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
 //carregando arquivos estaticos 
