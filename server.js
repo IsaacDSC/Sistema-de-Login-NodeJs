@@ -8,6 +8,9 @@ const path = require('path')
 app.get('/', (req, res) => {
     res.render('home/home')
 })
+app.get('/cadastro', (req, res) => {
+    res.render('cadastro/cadastro')
+})
 
 //configurando bodyParser
 app.use(bodyParser.urlencoded({ extended: false }))
