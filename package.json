@@ -1,0 +1,27 @@
+{
+  "name": "systemlogin",
+  "version": "1.0.0",
+  "description": "sistema de login usando nodejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsaacDSC/Sistema-de-Login-NodeJs.git"
+  },
+  "keywords": [
+    "sistema",
+    "de",
+    "login",
+    "cadastro",
+    "usuarios",
+    "autenticate."
+  ],
+  "author": "IsaacDSc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IsaacDSC/Sistema-de-Login-NodeJs/issues"
+  },
+  "homepage": "https://github.com/IsaacDSC/Sistema-de-Login-NodeJs#readme"
+}
