@@ -1,33 +1,25 @@
-.divider-text {
-    position: relative;
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
+#cadastro {
+    background-color: rgba(19, 18, 18, 0.596);
+    height: 400px;
+    width: 25%;
+    border: rgb(187, 186, 186) 1px solid;
+    border-radius: 20px;
 }
 
-.divider-text span {
-    padding: 7px;
-    font-size: 12px;
-    position: relative;
-    z-index: 2;
+label {
+    font-size: 20px;
+    margin-left: 30%;
 }
 
-.divider-text:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    border-bottom: 1px solid #ddd;
-    top: 55%;
-    left: 0;
-    z-index: 1;
+form input {
+    width: 90%;
 }
 
-.btn-facebook {
-    background-color: #405D9D;
-    color: #fff;
+form ul li {
+    display: block;
+    margin-top: 10px;
 }
 
-.btn-twitter {
-    background-color: #42AEEC;
-    color: #fff;
+.btns {
+    margin-left: 25%;
 }

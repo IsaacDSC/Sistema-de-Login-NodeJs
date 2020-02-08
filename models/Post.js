@@ -1,4 +1,5 @@
 const db = require('./db')
+
 const Post = db.sequelize.define('usuarios', {
     nome: {
         type: db.Sequelize.STRING
@@ -6,13 +7,7 @@ const Post = db.sequelize.define('usuarios', {
     email: {
         type: db.Sequelize.STRING
     },
-    DDD: {
-        type: db.Sequelize.STRING
-    },
     numero: {
-        type: db.Sequelize.STRING
-    },
-    trabalho: {
         type: db.Sequelize.STRING
     },
     password: {
@@ -22,4 +17,6 @@ const Post = db.sequelize.define('usuarios', {
 })
 
 //criando table in database
-Post.sync({ force: true })
+//Post.sync({ force: true })
+
+module.exports = Post

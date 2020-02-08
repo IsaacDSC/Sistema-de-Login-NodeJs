@@ -1,80 +1,29 @@
-<div class="container">
-    <br>
-    <p class="text-center">More bootstrap 4 components on <a href="http://bootstrap-ecommerce.com/">
-            Bootstrap-ecommerce.com</a></p>
-    <hr>
+<div class="wrapper fadeInDown">
+    <section id="cadastro">
+        <form action="/add" method="post">
+            <ul>
+                <li>
+                    <span>User Name</span>
+                    <input type="text" name="nome" placeholder="User Name">
+                </li>
+                <li>
+                    <span>E-mail</span>
+                    <input type="text" name="email" class="fadeIn second" placeholder="E-mail">
+                </li>
+                <li>
+                    <input type="text" name="numero" class="fadeIn third" placeholder="Contact Number">
+                </li>
+                <li>
+                    <span>Password</span>
+                    <input type="password" class="fadeIn third" name="senha" placeholder="Password">
+                </li>
+                <li class="btns">
+                    <button type="submit" class="btn btn-info">Enviar</button>
+                    <button type="reset" class="btn btn-danger">Reset</button>
+                </li>
+                <li><a href="/">Já tenho Conta</a></li>
+            </ul>
 
-
-
-    <form action="" method="post">
-
-        <div class="card bg-light">
-            <article class="card-body mx-auto" style="max-width: 400px;">
-                <h4 class="card-title mt-3 text-center">Create Account</h4>
-                <p class="text-center">Get started with your free account</p>
-                <p>
-                    <a href="" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i>   Login via Twitter</a>
-                    <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via
-                        facebook</a>
-                </p>
-                <p class="divider-text">
-                    <span class="bg-light">OR</span>
-                </p>
-                <form>
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-                        </div>
-                        <input name="" class="form-control" placeholder="Digite seu Nome Completo" type="text">
-                    </div> <!-- form-group// -->
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
-                        </div>
-                        <input name="" class="form-control" placeholder="Digite seu E-mail" type="email">
-                    </div> <!-- form-group// -->
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
-                        </div>
-                        <select class="custom-select" style="max-width: 120px;">
-                            <option selected="">+24</option>
-                            <option value="1">+31</option>
-                            <option value="2">+21</option>
-                            <option value="3">+48</option>
-                        </select>
-                        <input name="" class="form-control" placeholder="Phone number" type="text">
-                    </div> <!-- form-group// -->
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="fa fa-building"></i> </span>
-                        </div>
-                        <select class="form-control">
-                            <option selected="">Selecione sua Profissão</option>
-                            <option>Designer</option>
-                            <option>Manager</option>
-                            <option>Accaunting</option>
-                        </select>
-                    </div> <!-- form-group end.// -->
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-                        </div>
-                        <input class="form-control" placeholder="Crie sua Senha" type="password">
-                    </div> <!-- form-group// -->
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-                        </div>
-                        <input class="form-control" placeholder="Repita sua Senha" type="password">
-                    </div> <!-- form-group// -->
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block">Criar Conta</button>
-                    </div> <!-- form-group// -->
-                    <p class="text-center">Já tem uma conta? <a href="">Entre</a> </p>
-                </form>
-            </article>
-        </div> <!-- card.// -->
-
+        </form>
+    </section>
 </div>
-</form>
