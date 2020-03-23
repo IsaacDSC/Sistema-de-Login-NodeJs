@@ -1,6 +1,6 @@
 #cadastro {
     background-color: rgba(19, 18, 18, 0.596);
-    height: 400px;
+    height: 450;
     width: 25%;
     border: rgb(187, 186, 186) 1px solid;
     border-radius: 20px;
@@ -13,6 +13,11 @@ label {
 
 form input {
     width: 90%;
+}
+
+#password {
+    width: 88%;
+    height: 50px;
 }
 
 form ul li {
