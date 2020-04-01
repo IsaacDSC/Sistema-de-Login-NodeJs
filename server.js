@@ -3,8 +3,16 @@ const handlebars = require('express-handlebars')
 const bodyParser = require('body-parser')
 const app = express()
 const path = require('path')
-const Sequelize = require('sequelize')
-const Post = require('./models/Post')
+const session = require('express-session')
+const flash = require('connect-flash')
+const passport = require('passport')
+
+//inlcuindo arquivo para validação
+
+
+//adionando routes
+const home = require('./routes/home')
+const cadastro = require('./routes/cadastro')
 
 //configurando bodyParser
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -17,27 +25,33 @@ app.set('view engine', 'handlebars')
 //carregando arquivos estaticos 
 app.use(express.static(path.join(__dirname, 'public')))
 
-//adionando Rotas
-app.get('/', (req, res) => {
-    res.render('login/login')
-})
-app.get('/cadastro', (req, res) => {
-    res.render('cadastro/cadastro')
-})
-app.post('/add', (req, res) => {
-    //res.send('nome: ' + req.body.nome + 'email:' + req.body.email + 'numero' + req.body.numero + 'senha' + req.body.password)
-    Post.create({
-        nome: req.body.nome,
-        email: req.body.email,
-        numero: req.body.numero,
-        senha: req.body.senha
-    }).then(function() {
-        res.send('Cadastro enviado com sucesso')
-    }).catch(function(erro) {
-        res.send('error: ' + erro)
-    })
+//config da sessao
+app.use(session({
+    secret: 'systemLogin',
+    resave: true,
+    saveUninitialized: true
+}))
+
+//config flash
+app.use(flash())
+
+//config midleware flash
+app.use((req, res, next) => {
+    res.locals.success_msg = req.flash('success_msg')
+    res.error_msg = req.flash('error_msg')
+    next()
 })
 
+
+//config passport
+app.use(passport.initialize())
+app.use(passport.session())
+
+
+
+//adionando Rotas
+app.use('/', home)
+app.use('/cadastro', cadastro)
 
 const PORT = 3000
 app.listen(PORT, () => {
