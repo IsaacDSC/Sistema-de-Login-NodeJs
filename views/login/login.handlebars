@@ -1,5 +1,5 @@
 <div class="wrapper fadeInDown">
-    <form action="" method="post"></form>
+    <form action="/auth" method="post"></form>
     <div id="formContent">
         <!-- Tabs Titles -->
 
@@ -10,9 +10,9 @@
         </div>
 
         <!-- Login Form -->
-        <form>
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="username">
-            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+        <form method="POST" action="/auth">
+            <input type="text" id="login" class="fadeIn second" name="email" placeholder="username">
+            <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
             <input type="submit" class="fadeIn fourth" value="Log In">
         </form>
 

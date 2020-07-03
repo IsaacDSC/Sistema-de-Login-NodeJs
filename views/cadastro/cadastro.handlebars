@@ -1,19 +1,19 @@
 <div class="wrapper fadeInDown">
     <section id="cadastro">
-        <form action="/cadastro/add" method="post">
+        {{#each erros}}
+        <div class="alert alert-danger">{{message}}</div>
+        {{else}}
+        {{/each}}
+        <form action="/cadastro" method="post">
             <ul>
                 <li>
                     <span>User Name</span>
-                    <input type="text" name="nome" class=" form form-control"placeholder="User Name">
+                    <input type="text" name="name" class=" form form-control"placeholder="User Name">
                 </li>
                 <li>
                     <span>E-mail</span>
                     <br>
                     <input type="text" name="email" class="fadeIn second form form-control" placeholder="E-mail">
-                </li>
-                <li>
-                    <span>Tell of Contact</span>
-                    <input type="text" name="numero" class="fadeIn third form form-control" placeholder="Contact Number">
                 </li>
                 <li>
                     <span>Password</span>
