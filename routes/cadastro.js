@@ -13,13 +13,13 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     var erros = []
 
-    /*  const newUser = new Post({
-             nome: req.body.name,
-             email: req.body.email,
-             password: req.body.senha
-         }) */
-    /* res.send(req.body.senha) */
-    /* var senha = req.body.senha */
+    const newUser = new Post({
+            nome: req.body.name,
+            email: req.body.email,
+            password: req.body.senha
+        })
+        /* res.send(req.body.senha) */
+        /* var senha = req.body.senha */
     if (!req.body.name || req.body.name == undefined || req.body.name == null) {
         erros.push({ message: "Nome iválido!" })
             /* res.send('input undfine or input null') */
@@ -38,13 +38,12 @@ router.post('/', (req, res) => {
     if (erros.length > 0) {
         res.render('cadastro/cadastro', { erros: erros })
     } else {
-        const FindEmail = Post.findByPK(req.body.email)
-        if (FindEmail == req.body.email) {
-            res.send(user.email)
-            erros.push({ message: "Email já Cadastrado" })
-        } else {
-            res.send('foi para ultimo else')
-                /* bcrypt.genSalt(10, (err, salt) => {
+        Post.findOne({ where: { email: req.body.email } }).then((user) => {
+            if (user) {
+                res.send('Email já cadastrado')
+            } else {
+                //res.send('nao encontrado')
+                bcrypt.genSalt(10, (err, salt) => {
                     bcrypt.hash(newUser.password, salt, (err, hash) => {
                         if (err) {
                             res.send('Houve algum erro ao salvamento do usuario' + err)
@@ -55,9 +54,9 @@ router.post('/', (req, res) => {
                             //res.send(senha)
                         }
                     })
-                }) */
-        }
-
+                })
+            }
+        })
     }
 })
 
